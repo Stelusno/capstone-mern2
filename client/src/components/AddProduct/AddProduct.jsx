@@ -61,14 +61,14 @@ const Add = ({ handleCreate }) => {
         />
         <br />
         <br />
-        {/* <input
+        <input
           type="text"
           placeholder="image"
           name="image"
           onChange={handleChange}
         />
         <br />
-        <br /> */}
+        <br />
         <input type="submit" />
       </form>
     </>

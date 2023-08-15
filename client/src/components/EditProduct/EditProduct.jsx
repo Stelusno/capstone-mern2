@@ -60,7 +60,7 @@ const Edit = ({handleEdit, editedProduct}) => {
             value={product.size}
             onChange={handleChange}
           />
-          {/* <br />
+          <br />
           <br />
           <input
             type="text"
@@ -68,7 +68,7 @@ const Edit = ({handleEdit, editedProduct}) => {
             name="image"
             value={product.image}
             onChange={handleChange}
-          /> */}
+          />
           <br />
           <br />
           <input type="submit" />
