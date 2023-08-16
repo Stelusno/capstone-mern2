@@ -7,6 +7,7 @@ export default function AllProductsPage() {
   const [products, setProducts] = useState([]);
 
   const URL = 'http://localhost:3001';
+  // const URL = ;
   const getProducts = () => {
     axios.get(`${URL}/products`)
       .then((response) => setProducts(response.data))

@@ -9,6 +9,7 @@ export default function Admin() {
   const [products, setProducts] = useState([]);
 
   const URL = 'http://localhost:3001';
+  // const URL = ;
 
   const getProducts = () => {
     axios.get(`${URL}/products`)
