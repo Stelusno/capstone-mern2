@@ -1,14 +1,19 @@
-import './Product.css';
+import React from 'react';
+
 const Product = (props) => {
   return (
-    <>
-      <h3>Name: {props.product.name} </h3>
-      <p>Category: {props.product.category}</p>
-      <p>Description: {props.product.description}</p>
-      <p>Price: {props.product.price}</p>
-      <p>Size: {props.product.size}</p>
-      <img id="image" src={props.product.image} alt={props.product.name} />
-    </>
+    <div className="bg-white p-4 shadow-md">
+      <h3 className="text-xl font-semibold mb-2">{props.product.name}</h3>
+      <p className="text-gray-600 mb-2">Category: {props.product.category}</p>
+      <p className="text-gray-800 mb-4">{props.product.description}</p>
+      <p className="text-green-600 font-semibold mb-2">${props.product.price}</p>
+      <p className="text-gray-600">Size: {props.product.size}</p>
+      <img
+        className="mx-auto mt-4 rounded-lg"
+        src={props.product.image}
+        alt={props.product.name}
+      />
+    </div>
   );
 };
 

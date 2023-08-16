@@ -1,14 +1,24 @@
 const express = require('express');
-const app = express();
-const mongoose = require('mongoose');
+const logger = require('morgan');
+// const mongoose = require('mongoose');
 const Products = require('./models/product.js');
 const cors = require('cors');
-
 require('dotenv').config();
 require('./config/database.js');
+const app = express();
 
+const corsOptions = {
+    origin: "*",
+  }
+
+
+app.use(require('./config/checkToken'));
+app.use('/api/users', require('./routes/api/users'));
+
+app.use(cors(corsOptions));
+app.use(logger('dev'));
 app.use(express.json());
-app.use(cors());
+
 
 app.post('/products', (req, res)=>{
     Products.create(req.body)
@@ -40,7 +50,7 @@ app.listen(3001, ()=>{
     console.log('listening...');
 });
 
-mongoose.connect(process.env.DB_URL)
-mongoose.connection.once('open', ()=>{
-    console.log('connected to mongod...');
-});
+// mongoose.connect(process.env.DB_URL)
+// mongoose.connection.once('open', ()=>{
+//     console.log('connected to mongod...');
+// });

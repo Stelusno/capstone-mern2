@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const Add = ({ handleCreate }) => {
   const [product, setProduct] = useState({
@@ -7,71 +7,74 @@ const Add = ({ handleCreate }) => {
     description: '',
     price: 0,
     size: '',
-    image: ''
+    image: '',
   });
 
   const handleChange = (event) => {
     setProduct({ ...product, [event.target.name]: event.target.value });
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     handleCreate(product);
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className="mb-8 text-center">
+      <h2 className="text-xl font-semibold mb-4">Add New Product</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
         <input
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-400"
           type="text"
-          placeholder="name"
+          placeholder="Name"
           name="name"
           onChange={handleChange}
         />
-        <br />
-        <br />
         <input
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-400"
           type="text"
-          placeholder="category"
+          placeholder="Category"
           name="category"
           onChange={handleChange}
         />
-        <br />
-        <br />
         <input
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-400"
           type="text"
-          placeholder="description"
+          placeholder="Description"
           name="description"
           onChange={handleChange}
         />
-        <br />
-        <br />
         <input
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-400"
           type="number"
-          placeholder="price"
+          placeholder="Price"
           name="price"
           onChange={handleChange}
         />
-        <br />
-        <br />
         <input
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-400"
           type="text"
-          placeholder="size"
+          placeholder="Size"
           name="size"
           onChange={handleChange}
         />
-        <br />
-        <br />
         <input
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-400"
           type="text"
-          placeholder="image"
+          placeholder="Image"
           name="image"
           onChange={handleChange}
         />
-        <br />
-        <br />
-        <input type="submit" />
+        <div className="flex justify-center">
+          <button
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            type="submit"
+          >
+            Add Product
+          </button>
+        </div>
       </form>
-    </>
+    </div>
   );
 };
 
