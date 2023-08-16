@@ -10,7 +10,7 @@ const port = process.env.PORT || 3001;
 
 
 const corsOptions = {
-    origin: "*",
+    origin: "https://capstone-mern2.onrender.com",
   }
 
 
