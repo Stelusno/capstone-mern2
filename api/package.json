@@ -9,8 +9,6 @@
     "morgan": "^1.10.0"
   },
   "scripts": {
-    "install-server": "npm install",
-    "start-server": "node server.js",
     "install-client": "npm install",
     "build-client": "npm run build",
     "start-client": "npm run start"
