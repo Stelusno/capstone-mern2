@@ -7,5 +7,9 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.3",
     "morgan": "^1.10.0"
+  },
+  "scripts": {
+    "install-server": "npm install",
+    "start-server": "node server.js"
   }
 }
