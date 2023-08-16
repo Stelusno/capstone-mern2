@@ -14,8 +14,8 @@ const corsOptions = {
   }
 
 
-app.use(require('./config/checkToken'));
-app.use('/api/users', require('./routes/api/users'));
+// app.use(require('./config/checkToken'));
+// app.use('/api/users', require('./routes/api/users'));
 
 app.use(cors(corsOptions));
 app.use(logger('dev'));
