@@ -6,8 +6,8 @@ import { Fragment } from 'react';
 export default function AllProductsPage() {
   const [products, setProducts] = useState([]);
 
-  const URL = 'http://localhost:3001';
-  // const URL = ;
+  // const URL = 'http://localhost:3001';
+  const URL = 'https://capstonemern2.onrender.com';
   const getProducts = () => {
     axios.get(`${URL}/products`)
       .then((response) => setProducts(response.data))
