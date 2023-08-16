@@ -1,4 +1,4 @@
-# The Spot: Your Ultimate E-commerce Clothing App
+# The Spot: E-commerce Clothing App
 
 ## Introduction
 **The Spot** is an e-commerce app.
