@@ -6,6 +6,8 @@ const cors = require('cors');
 require('dotenv').config();
 require('./config/database.js');
 const app = express();
+const port = process.env.PORT || 3001; 
+
 
 const corsOptions = {
     origin: "*",
@@ -46,7 +48,7 @@ app.put('/products/:id', (req, res)=>{
     .then((updatedProduct)=>res.json(updatedProduct))
 });
 
-app.listen(3001, ()=>{
+app.listen(port, ()=>{
     console.log('listening...');
 });
 
